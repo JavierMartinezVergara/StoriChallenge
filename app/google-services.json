@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "639810115055",
+    "project_id": "storiproject-7a86e",
+    "storage_bucket": "storiproject-7a86e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639810115055:android:6ac40c06c745b2fa83121a",
+        "android_client_info": {
+          "package_name": "com.javiermtz.storitest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqF5i7n_LU87sJjCL33YGGBujozqwoNyE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
