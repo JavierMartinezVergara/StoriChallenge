@@ -18,3 +18,5 @@ rootProject.name = "Stori Test"
 include(":app")
 include(":authentication")
 include(":firestore")
+include(":data")
+include(":domain")

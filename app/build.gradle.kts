@@ -89,4 +89,6 @@ dependencies {
     // Firebase
     implementation(platform(Firebase.bom))
     implementation(Firebase.auth_ktx)
+
+    api(project(":domain"))
 }

@@ -2,17 +2,36 @@ package com.javiermtz.storitest.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.javiermtz.storitest.R
+import com.javiermtz.storitest.R.font
 
 // Set of Material typography styles to start with
+val RobotoCondensed = FontFamily(
+    Font(R.font.roboto_condensed_light, FontWeight.Light),
+    Font(R.font.roboto_condensed_regular, FontWeight.Normal)
+)
+
+val RobotoBold = FontFamily(
+    Font(R.font.roboto_bold, FontWeight.Bold)
+)
+val RobotoMedium = FontFamily(
+    Font(R.font.roboto_medium, FontWeight.Medium)
+)
+val RobotoLight = FontFamily(
+    Font(R.font.roboto_light, FontWeight.Light)
+)
+
 val Typography = Typography(
-  body1 = TextStyle(
-    fontFamily = FontFamily.Default,
-    fontWeight = FontWeight.Normal,
-    fontSize = 16.sp
-  )
+    body1 = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.Normal,
+        fontSize = 16.sp
+    )
+
   /* Other default text styles to override
     button = TextStyle(
         fontFamily = FontFamily.Default,
