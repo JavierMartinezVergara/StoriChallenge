@@ -1,7 +1,10 @@
 package com.example.domain.di
 
 import com.example.data.auth.LoginRepository
+import com.example.data.user.UserRepository
+import com.example.domain.usecases.CreateUserUseCase
 import com.example.domain.usecases.LoginAuthUseCase
+import com.example.domain.usecases.RegisterUserUseCase
 import com.example.domain.usecases.UseCases
 import dagger.Module
 import dagger.Provides
@@ -16,10 +19,13 @@ object UseCaseModule {
     @Provides
     @Singleton
     fun provideUseCases(
-        loginRepository: LoginRepository
+        loginRepository: LoginRepository,
+        userRepository: UserRepository
     ): UseCases {
         return UseCases(
-            loginAuthUseCase = LoginAuthUseCase(loginRepository = loginRepository)
+            loginAuthUseCase = LoginAuthUseCase(loginRepository = loginRepository),
+            registerUserUseCase = RegisterUserUseCase(loginRepository = loginRepository),
+            createUserUseCase = CreateUserUseCase(userRepository = userRepository)
         )
     }
 }
