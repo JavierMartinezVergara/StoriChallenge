@@ -2,6 +2,7 @@ package com.javiermtz.storitest.presentation.utils
 
 object Contants {
 
+    const val SPLASH_SCREEN = "splash_screen"
     const val LOGIN_SCREEN = "login_screen"
     const val HOME_SCREEN = "home_screen/"
     const val DETAIL_SCREEN = "detail_screen/"
