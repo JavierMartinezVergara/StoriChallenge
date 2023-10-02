@@ -204,7 +204,6 @@ fun LoginScreen(
                         }
 
                         is Success -> {
-                            viewModel.setState(Empty)
                             LaunchedEffect(Unit) {
                                 navController.navigate(Home.passUuid(state.userData.uuid))
                             }

@@ -11,6 +11,7 @@
   <string name="message_error_user">Input proper email format</string>
   <string name="email">Email</string>
   <string name="welcome_to_appointme">Welcome to \n AppointME</string>
+  <string name="no_movements_available">Ningun movimiento detectado</string>
   <string name="my_appointments">My appointments</string>
   <string name="profile">Profile</string>
   <string name="find_business">Find Business</string>
