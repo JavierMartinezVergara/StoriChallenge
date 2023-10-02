@@ -6,8 +6,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.domain.models.MovementData
 import com.javiermtz.storitest.presentation.components.PutAnExtra
+import com.javiermtz.storitest.presentation.home.HomeScreen
 import com.javiermtz.storitest.presentation.login.LoginScreen
+import com.javiermtz.storitest.presentation.navigation.Screen.Detail
 import com.javiermtz.storitest.presentation.navigation.Screen.Home
 import com.javiermtz.storitest.presentation.navigation.Screen.Login
 import com.javiermtz.storitest.presentation.navigation.Screen.RegisterUser
@@ -36,11 +39,23 @@ fun SetupNavigationGraph() {
         ) { navBackstackEntry ->
             val uuid = navBackstackEntry.arguments?.getString(UUID) ?: ""
             PutAnExtra(key = UUID, value = uuid)
+            HomeScreen(navController = navHostController)
         }
         composable(
             route = RegisterUser.route
         ) {
             RegisterUserScreen(navController = navHostController)
+        }
+        composable(
+            route = Detail.route,
+            arguments = listOf(
+                navArgument("data") {
+                    type = NavType.ParcelableType(MovementData::class.java)
+                }
+            )
+        ) { navBackstackEntry ->
+            val uuid : MovementData = navBackstackEntry.arguments?.getParcelable("data") ?: MovementData()
+            HomeScreen(navController = navHostController)
         }
     }
 }

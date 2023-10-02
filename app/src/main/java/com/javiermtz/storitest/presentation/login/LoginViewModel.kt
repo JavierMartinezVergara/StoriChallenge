@@ -65,12 +65,12 @@ class LoginViewModel @Inject constructor(
             loginMutableStateFlow.value = StatesLogin.Loading
             loginAuthUseCase(email = email, password = password).collect {
                 when (val resource = it) {
-                    is ResponseStatus.Error -> {
+                    is Error -> {
                         loginMutableStateFlow.value =
                             StatesLogin.Error(resource.message)
                     }
 
-                    is ResponseStatus.Success -> {
+                    is Success -> {
                         loginMutableStateFlow.value = StatesLogin.Success(
                             UserData(
                                 user = resource.data.email,

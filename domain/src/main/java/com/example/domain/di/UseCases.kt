@@ -4,6 +4,7 @@ import com.example.data.auth.LoginRepository
 import com.example.data.user.UserRepository
 import com.example.domain.usecases.CreateUserUseCase
 import com.example.domain.usecases.LoginAuthUseCase
+import com.example.domain.usecases.ProfileGetDataUseCase
 import com.example.domain.usecases.RegisterUserUseCase
 import com.example.domain.usecases.UseCases
 import dagger.Module
@@ -25,7 +26,8 @@ object UseCaseModule {
         return UseCases(
             loginAuthUseCase = LoginAuthUseCase(loginRepository = loginRepository),
             registerUserUseCase = RegisterUserUseCase(loginRepository = loginRepository),
-            createUserUseCase = CreateUserUseCase(userRepository = userRepository)
+            createUserUseCase = CreateUserUseCase(userRepository = userRepository),
+            profileGetDataUseCase = ProfileGetDataUseCase(userRepository = userRepository)
         )
     }
 }
